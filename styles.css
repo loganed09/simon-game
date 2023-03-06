@@ -46,11 +46,28 @@ body {
   .yellow {
     background-color: yellow;
   }
+
+  /* .mobile {
+    text-align: center;
+    background-color: white;
+    font-size: 5rem;
+    visibility: hidden;
+  }
+
+  .mobile p {
+    margin: 0;
+    padding-top: 3rem;
+  }
   
   .pressed {
     box-shadow: 0 0 20px white;
     background-color: grey;
   }
-  
 
+  
+@media only screen and (max-width: 800px) {
+  .mobile {
+    visibility: visible;
+  }
+} */
 

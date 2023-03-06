@@ -21,17 +21,18 @@ $(document).on('tap', () => {
     }
 })
 
-// $(".mobile").click((e) => {
-//     if(!started){
-//         $('.mobile').addClass('pressed');
-//         setTimeout(()=> {
-//             $('.mobile').removeClass('pressed');
-//         }, 100)
-//         $("h1").text(`Level ${level}`)
-//         nextSequence();
-//         started=true;
-//     }
-// })
+$(".mobile").click((e) => {
+    if(!started){
+        $('.mobile').addClass('pressed');
+        setTimeout(()=> {
+            $('.mobile').removeClass('pressed');
+            $("h1").text(`Level ${level}`)
+            nextSequence();
+            started=true;
+        }, 100)
+        
+    }
+})
 
 $('.btn').click((e) => {
     userClickedPattern.push(e.target.id)

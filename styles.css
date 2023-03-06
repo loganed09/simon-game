@@ -47,14 +47,17 @@ body {
     background-color: yellow;
   }
 
-  /* .mobile {
+  .mobile {
     text-align: center;
     background-color: white;
     font-size: 5rem;
-    visibility: hidden;
   }
 
-  .mobile p {
+  .hide-on-desktop {
+    display: none;
+  }
+
+  .mobile p{
     margin: 0;
     padding-top: 3rem;
   }
@@ -66,8 +69,8 @@ body {
 
   
 @media only screen and (max-width: 800px) {
-  .mobile {
-    visibility: visible;
+  .hide-on-desktop {
+    display: inline-block;
   }
-} */
+}
 

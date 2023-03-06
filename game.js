@@ -13,24 +13,16 @@ $(document).keydown(() =>{
     }
 })
 
-$(document).on('tap', () => {
-    if(!started){
-        $("h1").text(`Level ${level}`)
-        nextSequence();
-        started= true;
-    }
-})
 
 $(".mobile").click((e) => {
     if(!started){
         $('.mobile').addClass('pressed');
         setTimeout(()=> {
             $('.mobile').removeClass('pressed');
-            $("h1").text(`Level ${level}`)
-            nextSequence();
-            started=true;
         }, 100)
-        
+        $("h1").text(`Level ${level}`)
+        nextSequence();
+        started= true;
     }
 })
 
@@ -85,6 +77,7 @@ const checkAnswer = (currentLevel) => {
             $("body").removeClass('game-over')
         }, 200);
         startOver();
+        new Audio(`sounds/wrong.mp3`).play();
     }
 }
 

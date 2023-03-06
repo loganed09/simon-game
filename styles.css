@@ -3,11 +3,15 @@ body {
     background-color: #011F3F;
   }
   
-  #level-title {
+  #level-title-desktop {
     font-family: 'Press Start 2P', cursive;
     font-size: 3rem;
     margin:  5%;
     color: #FEF2BF;
+  }
+
+  #level-title-mobile {
+    display: none;
   }
   
   .container {
@@ -54,13 +58,10 @@ body {
   }
 
   .hide-on-desktop {
-    display: none;
+    visibility: hidden;
   }
 
-  .mobile p{
-    margin: 0;
-    padding-top: 3rem;
-  }
+
   
   .pressed {
     box-shadow: 0 0 20px white;
@@ -70,7 +71,47 @@ body {
   
 @media only screen and (max-width: 800px) {
   .hide-on-desktop {
-    display: inline-block;
+    visibility: visible;
+  }
+
+  #level-title-desktop {
+    display: none;
+  }
+
+  #level-title-mobile {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 3rem;
+    margin:  5%;
+    color: #FEF2BF; 
+    visibility: visible;
+  }
+
+
+  h1 {
+    content: "Press Start Button to Start"
+  }
+
+  .mobile p{
+    margin: 0;
+    padding-top: 2rem;
+    font-size: 2rem;
+  }
+
+  .mobile {
+    text-align: center;
+    background-color: white;
+  }
+
+  .container {
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .btn {
+    height: 100px;
+    width: 100px;
   }
 }
 

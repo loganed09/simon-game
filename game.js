@@ -82,3 +82,23 @@ const checkAnswer = (currentLevel) => {
 }
 
 
+// Mobile
+
+
+const nextSequenceMobile = () => {
+    userClickedPattern = [];
+    level++;
+    $("h1").text(`Level ${level}`)
+    let randomNumber = Math.floor(Math.random() * 4);
+    let randomChosenColor = buttonColors[randomNumber];
+    gamePattern.push(randomChosenColor);
+    animatePressMobile(randomChosenColor);
+    playSound(randomChosenColor);
+};
+
+const animatePressMobile = (currentColor) => {
+    $('#' + currentColor).addClass('pressed');
+    setTimeout(()=> {
+        $('#' + currentColor).removeClass('pressed');
+    }, 100)
+}

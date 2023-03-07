@@ -72,6 +72,8 @@ body {
 @media only screen and (max-width: 720px) {
   .hide-on-desktop {
     visibility: visible;
+    display: flex;
+    justify-content: center;
   }
 
   #level-title-desktop {
@@ -88,13 +90,16 @@ body {
 
   .mobile p{
     margin: 0;
-    padding-top: 2rem;
     font-size: 2rem;
   }
 
   .mobile {
     text-align: center;
     background-color: white;
+    width: 25%;
+    border-radius: 20%;
+    border: 10px solid black;
+    margin: 25px;
   }
 
   .container {
